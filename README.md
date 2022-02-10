@@ -1,3 +1,5 @@
+# Pierre-Jean BONAZZI
+
 # react-netflix-clone-course
 
 ## Features
@@ -53,3 +55,6 @@ You have to use MUI lib to build your interfaces.
 ![](Assets/serieEpList.png)
 ![](Assets/topshows.png)
 ![](Assets/whoswatching.png)
+
+
+## Pierre-Jean BONAZZI - LP WMCE
