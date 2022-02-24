@@ -1,4 +1,34 @@
-/* eslint-disable import/no-anonymous-default-export */
-import React from 'react';
+import React from 'react'
+import HomePage from './pages/HomePage'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import SigninPage from './pages/SigninPage'
+import SignupPage from './pages/SignupPage'
+import BrowsePage from './pages/BrowsePage'
+import NotFoundPage from './pages/NotFoundPage'
 
-export default () => <div>My App</div>;
+/*---> Component <---*/
+const App = () => {
+    return (
+        <Router>
+            <Switch>
+                <Route exact path='/'>
+                    <HomePage/>
+                </Route>
+                <Route exact path='/signin'>
+                    <SigninPage/>
+                </Route>
+                <Route exact path='/signup'>
+                    <SignupPage/>
+                </Route>
+                <Route exact path='/browse'>
+                    <BrowsePage/>
+                </Route>
+                <Route exact path='*'>
+                    <NotFoundPage/>
+                </Route>
+            </Switch>
+        </Router>
+    )
+}
+
+export default App
