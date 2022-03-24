@@ -1,23 +1,19 @@
-import React from 'react'
+import React,{useCallback} from 'react'
 import styled from 'styled-components'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 /*---> Component <---*/
 const OptFormButton = ({ children }: PropsType) => {
-    const history = useHistory()
 
-    const handleClick = () => {
-        history.push('/browse')
-        const HeaderElement: HTMLElement | null = document.getElementById('header')
-        HeaderElement?.scrollIntoView()
-    }
+  const navigate = useNavigate();
+  const handleOnClick = useCallback(() => navigate('/browse', {replace: true}), [navigate]);
 
-    return (
-        <Wrapper onClick={handleClick}>
-            {children}
-            <img src='../images/icons/chevron-right.png' alt='Try Now' />
-        </Wrapper>
-    )
+  return (
+    <Wrapper onClick={handleOnClick}>
+        {children}
+        <img src='../images/icons/chevron-right.png' alt='Try Now' />
+    </Wrapper>
+  )
 }
 
 /*---> Styles <---*/
@@ -33,17 +29,21 @@ export const Wrapper = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
+
   a {
     color: white;
   }
+
   img {
     margin-left: 10px;
     filter: brightness(0) invert(1);
     width: 24px;
   }
+
   &:hover {
     background: #f40612;
   }
+
   @media (max-width: 950px) {
     height: 50px;
     font-size: 16px;
@@ -54,7 +54,7 @@ export const Wrapper = styled.div`
 
 /*---> Interfaces <---*/
 interface PropsType {
-    children?: string
+  children?: string
 }
 
 export default OptFormButton

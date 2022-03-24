@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 /*---> Component <---*/
 const PlayButton = ({ children, ...restProps }: PropsType) => {
-    return <Button {...restProps}>{children}</Button>
+  return <Button {...restProps}>{children}</Button>
 }
 
 /*---> Styles <---*/
@@ -22,6 +22,7 @@ export const Button = styled.button`
   transition: 0.4s ease;
   margin-bottom: 200px;
   outline: 0;
+
   &:hover {
     background: #ff1e1e;
     color: white;
@@ -29,8 +30,8 @@ export const Button = styled.button`
 `
 /*---> Interfaces <---*/
 interface PropsType {
-    children: string
-    onClick: () => void
+  children: string
+  onClick: () => void
 }
 
 export default PlayButton

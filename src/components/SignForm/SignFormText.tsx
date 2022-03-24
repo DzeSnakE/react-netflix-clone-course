@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 /*---> Component <---*/
 const SignFormText = ({ children }: PropsType) => {
-    return <Text>{children}</Text>
+  return <Text>{children}</Text>
 }
 
 /*---> Styles <---*/
@@ -15,7 +15,7 @@ export const Text = styled.p`
 
 /*---> Interfaces <---*/
 interface PropsType {
-    children?: string | ReactNode
+  children?: string | ReactNode
 }
 
 export default SignFormText

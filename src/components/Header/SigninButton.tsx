@@ -1,16 +1,15 @@
-import React from 'react'
+import React, {useCallback} from 'react'
 import styled from 'styled-components'
-import { useHistory } from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
 
 /*---> Component <---*/
 const SigninButton = ({ children }: PropsType) => {
-    const history = useHistory()
 
-    const handleClick = () => {
-        history.push('/signin')
-    }
+  const navigate = useNavigate();
+  const handleOnClick = useCallback(() => navigate('/signin', {replace: true}), [navigate]);
 
-    return <LinkButton onClick={handleClick}>{children}</LinkButton>
+  return <LinkButton onClick={handleOnClick}>{children}</LinkButton>
+
 }
 
 /*---> Styles <---*/
@@ -29,7 +28,7 @@ export const LinkButton = styled.div`
 
 /*---> Interfaces <---*/
 interface PropsType {
-    children?: string
+  children?: string
 }
 
 export default SigninButton

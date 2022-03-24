@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 /*---> Component <---*/
 function HeaderLink({ children, ...restProps }: PropsType) {
-    return <Wrapper {...restProps}>{children}</Wrapper>
+  return <Wrapper {...restProps}>{children}</Wrapper>
 }
 
 /*---> Styles <---*/
@@ -17,8 +17,8 @@ export const Wrapper = styled.div`
 
 /*---> Interfaces <---*/
 interface PropsType {
-    children: string
-    onClick: () => void
+  children: string
+  onClick: () => void
 }
 
 export default HeaderLink

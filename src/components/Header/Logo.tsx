@@ -1,25 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 /*---> Component <---*/
 const Logo = () => {
-    const history = useHistory()
+  const history = useNavigate()
 
-    function handleClick() {
-        history.push('/')
-    }
-
-    return (
-        <Image
-            src='/images/misc/logo.svg'
-            alt='Netflix logo'
-            onClick={handleClick}
-        />
-    )
+  return (
+    <Image
+      src='/images/misc/logo.svg'
+      alt='Netflix logo'
+   />
+  )
 }
 
-/*---> Styles <---*/
+/*---> Component <---*/
 export const Image = styled.img`
   height: 32px;
   width: 108px;

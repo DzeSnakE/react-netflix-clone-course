@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 /*---> Component <---*/
 function BrowseNavbar({ children }: PropsType) {
-    return <Wrapper>{children}</Wrapper>
+  return <Wrapper>{children}</Wrapper>
 }
 
 /*---> Styles <---*/
@@ -19,7 +19,8 @@ export const Wrapper = styled.nav`
 
 /*---> Interfaces <---*/
 interface PropsType {
-    children?: ReactNode
+  children?: ReactNode
 }
 
 export default BrowseNavbar
+

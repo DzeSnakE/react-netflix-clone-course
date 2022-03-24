@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 /*---> Component <---*/
 const SignFormTitle = ({ children }: PropsType) => {
-    return <Title>{children}</Title>
+  return <Title>{children}</Title>
 }
 
 /*---> Styles <---*/
@@ -16,7 +16,7 @@ export const Title = styled.h1`
 
 /*---> Interfaces <---*/
 interface PropsType {
-    children?: string
+  children?: string
 }
 
 export default SignFormTitle

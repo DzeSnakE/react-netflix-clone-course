@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 /*---> Component <---*/
 const SignFormLink = ({ children, ...restProps }: PropsType) => {
-    return <Link {...restProps}>{children}</Link>
+  return <Link {...restProps}>{children}</Link>
 }
 
 /*---> Styles <---*/
@@ -14,6 +14,7 @@ export const Link = styled.span`
   cursor: pointer;
   text-decoration: none;
   margin-left: 5px;
+
   &:hover {
     text-decoration: underline;
   }
@@ -21,8 +22,8 @@ export const Link = styled.span`
 
 /*---> Interfaces <---*/
 interface PropsType {
-    children?: string
-    onClick?: () => void
+  children?: string
+  onClick?: () => void
 }
 
 export default SignFormLink
